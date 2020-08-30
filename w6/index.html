@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Stephanie Nagel">
+    <meta name="description" content="Intro to JavaScript">
+
+    <title>Week 6 | JavaScript</title>
+</head>
+<body>
+
+    <h1>Katie is the best professor EVER!! She ROCKS!!</h1>
+
+    <script>
+        
+        //promt user for rate of pay 
+        var hourlyRate = prompt(`Enter hourly rate: \n`)
+        console.log(`Hourly Rate ${hourlyRate}`) //record for test 
+        hourlyRate = Number(hourlyRate) //store as Number 
+
+
+
+        //promy user for hours worked in 1 week 
+        var hoursWorked = prompt(`Enter hours worked in week: \n`)
+        console.log(`Hours worked ${hoursWorked}`) //record for test 
+        hoursWorked = Number(hoursWorked) //store as Number 
+
+        //need to covert into a 2 week pay period 
+        var twoWeeks = hoursWorked * 2
+
+
+
+        //promt user for tax rate 
+        var taxRate = prompt(`Enter tax rate: \n`)
+        console.log(`Tax rate ${taxRate}`) //record for test 
+        taxRate = Number(taxRate) //store as Number 
+
+        //need to covert tax rate to a percentage for math 
+        var convertTax = taxRate / 100
+        console.log(`Coverted Tax rate ${convertTax}`) //record for test 
+
+
+        //start math process here 
+        var grossPay = twoWeeks * hourlyRate
+        console.log(`Gross ${grossPay}`) //record for test 
+        var uncleSams = grossPay * convertTax
+        console.log(`Sam's ${uncleSams}`) //record for test 
+        var netPay = grossPay - uncleSams
+        console.log(`Net ${netPay}`) //record for test 
+
+
+
+        /*
+        
+        all final values that are displayed to both console and user are found below
+        any other console.logs were for testing purposes only.
+
+
+        */
+
+        //space in console to separate testing comments and rewquired comments 
+        console.log("")
+        console.log("")
+        console.log("")
+
+
+
+        //all final values must have 2 decimal points 
+        var grossPayFixed = grossPay.toFixed(2)
+        console.log(`Gross Pay: $${grossPayFixed}`)
+        var uncleSamsFixed = uncleSams.toFixed(2)
+        console.log(`Uncle Sam's Share: $${uncleSamsFixed}`)
+        var netPayFixed = netPay.toFixed(2)
+        console.log(`Net Pay: $${netPayFixed}`)
+
+        //display final outputs - gross/sam's/net
+        alert(`Gross Pay: $${grossPayFixed}\nUncle Sam's Share: $${uncleSamsFixed}\nNet Pay: $${netPayFixed}`)
+
+    </script>
+    
+</body>
+</html>

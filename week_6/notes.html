@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <!--standard syntax-->
+    <script>
+        var x = 10;
+        console.log(x)
+    </script>
+
+
+
+    <!--link to seprate JS file-->
+    <script src="script.js"></script>
+
+
+
+    <!--tabbed, nested block code-->
+    <script>
+        function myFunction()
+        {
+        console.log(`Hello from a function`)
+        }
+    </script>
+
+
+
+    <!--JS written on 1 line-->
+    <script> function myFunction(){console.log(`Hello from a function`)} </script>
+
+
+
+    <!--multiple statements in block-->
+    <script>function myFunction(){console.log(`Hello from a function`); console.log(`This is another print to the console`)}</script>
+
+
+    <!--Nesting and tabbing and readability-->
+    <script>
+
+        //Less Readable
+        function checkNums()
+        {
+        if(x > y)
+        {
+        //do something here
+        //do something else here
+        }
+        }
+
+
+
+        //More Readable
+        function checkNums()
+        {
+        if(x > y)
+            {
+                //do something here
+                //do something else here
+            }
+        }
+
+    </script>
+
+
+    <!--ONLY exception for not using {}-->
+    <script>
+        if(x > y) 
+        console.log(`x is greater than y`)
+    </script>
+
+
+    <!--Descriptive naming rigth-VS-wrong-->
+    <script>
+
+        //Wrong
+        var a = 24;
+
+        //Correct
+        var age = 24;
+
+        //Wrong
+        function bla(a,b)
+        {
+        return a+b;
+        }
+
+        //Correct
+        function add(a,b)
+        {
+        return a+b
+        }
+
+        //Wrong
+        var n1 = `Dodge`
+        var n2 = `Charger`
+
+        //Correct
+        var make = `Dodge`
+        var model = `Charger`
+    </script>
+
+
+    <!--Example of camelCaseNaming-->
+    <script>
+        var thisIsMyVeryLongAndDescriptiveVariableName = true;
+
+        function getNamesFromSever()
+        {
+        //A bunch of code to retrieve names from a server.
+        }
+    </script>
+
+
+    <!--Defining a function-->
+    <script>
+        function doSomething()
+        {
+        //this line of code will execute...
+        //then this...
+        //then this...
+        }
+    </script>
+    
+
+    <!--Calling a funtion-->
+    <script>
+        doSomething();
+    </script>
+
+
+    <!--Funtions can have parameters-->
+    <script>
+        function sayHelloTo(name)
+        {
+        console.log("Hello " + name);
+        }
+
+        sayHelloTo("Billy");
+    </script>
+
+
+    <!--Funtions can Return data-->
+    <script>
+        function sayHelloTo(name)
+        {
+        return "Hello " + name;
+        }
+
+
+        //stores data as var
+        var message = sayHelloTo("Jay");
+        console.log(message);
+
+
+        //other funtions can also use returned data  
+        alert(sayHelloTo("Erik"));
+    </script>
+
+
+    <!--Funtion stored as variable-->
+    <script> var sayHelloTo = function(){return "Hello " + name;} 
+    </script>
+
+
+    <!--Conditional Statements -->
+    <script>
+        /*  Conditional opperators
+
+        ==      //Checks equality of values
+        ===     //Checks equality of values and data types simultaneously
+        !=      //values not equal to
+        !==     //values and data type are not equal
+        >       //less than
+        <       //greater than
+        >=      //greater than or equal to
+        <=      //less than or equal to
+        
+        */
+
+
+
+        /*  Logical opperators 
+
+        && //and
+
+        || //or
+
+        */
+
+
+
+        /*  Conditonal Statements 
+
+        if(a<=b){//do something}
+        else if(a > b){//do something else}
+        else{//do a default thing} 
+        */
+
+
+
+        //  Switch Case 
+
+        var a = "lemons"
+
+
+        switch(a)
+        {
+        case "apples":
+        //do something
+        break;
+
+        case "strawberries":
+        //do something
+        break;
+
+        case "lemons":
+        //do something
+        break;
+
+        default:
+        //do something
+        break;
+        }
+
+
+
+        // Ternary Opperations
+        var age = 30
+        var legalDrinkingAge = (age >= 21)?`old enough`:`too young`
+        //legalDrinkingAge will equal `old enough`
+
+    
+    </script>
+
+
+    <!--Arithmatic operators-->
+    <script>
+        /*
+
+        +      //addition
+        -       //subtraction
+        ++   //increment by one
+        --     //decrement by one
+        *     //multiplication
+        /      //division
+        %    //divides and returns a whole number remainder
+        +=  //increment by the number you specify after the = sign
+        -=   //decrements by a number you specify after the = sign
+        *=  //multiplies by a number you specify after the = sign
+        /=  //divides by a number you specify after the = sign
+
+        */ 
+
+
+
+        // Modulus Operator
+        5%4  // This would return 1. Five is not divisible by four evenly
+        8%4  // This would return 0. Eight is divisible by four evenly
+
+
+
+        //Incrementing by more than one 
+        var a = 5;
+        a += 5;
+
+        //above shorthand for 
+        a = a + 5;
+
+    </script>
+
+
+    <!--Sting litterals-->
+    <script>
+        //using litterals and the correct syntax
+        var first = `Tom`
+        var last = `Hanks`
+        var name = `${first} ${last}`
+        var message = `Hi! My name is ${name}. It's nice to meet you.`
+        //The variable message equal `Hi! My name is Tom Hanks. It's nice to meet you`
+
+        //not utilizing literals  
+        var first = "Tom"
+        var last = "Hanks"
+        var name = "first" + " " + "last"
+        var message = "Hi! My name is" + name + ". It's nice to meet you."
+        //The variable message equal `Hi! My name is Tom Hanks. It's nice to meet you`
+    </script>
+
+
+    <!--blocking vs non-blockin IO-->
+    <script>
+        console.log(`first`);
+        setTimeout(function(){console.log(`second`), 3000});
+        setTimeout(function(){console.log(`third`), 500});
+        console.log(`last`);
+    </script>
+    
+</body>
+</html>
