@@ -7,13 +7,47 @@
 </head>
 <body>
     <html>
+        <form>
+            <input type="text" id="first">
+            <input type="button" id="enter-button" value="Enter">
+        </form>
         <script>
-            var button = document.querySelector(`#submit`)
-            submit.addEventListener(`click`, function(event)
+            /*
+            document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
+            function alertName(e)
             {
-                console.log(event)
+            alert(document.querySelector(`#first`).value)
+            }
+            */
+
+            /*          CUSTOM CALLBACK FUNCTION 
+            function doSomething(_a, _b, _function) {
+            var sum = _a + _b
+            _function(sum)
+            }
+
+            doSomething(5, 5, function(_sum) {
+            alert(_sum)
             })
+            doSomething(5, 5, function(_sum) {
+            console.log(_sum)
+            })
+            */
+
         </script>
+
+    
+        <script>
+
+            //Speicial Topic: Making function definitions call themselves
+
+            (function doSomething()
+            {
+            console.log(`Okay!`)
+            })()
+        </script>
+        
+
     </html>
 
     
