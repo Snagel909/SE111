@@ -7,10 +7,33 @@
 </head>
 <body>
     <html>
-        <form>
-            <input type="text" id="first">
-            <input type="button" id="enter-button" value="Enter">
-        </form>
+
+  
+        
+        <script>/*
+
+            //add above <script> tag
+                <input type="text" id="first" name="first">
+                <input type="text" id="last" name="last">
+
+
+            var first= document.querySelector(`#first`)
+            var last= document.querySelector(`#last`)
+
+            first.addEventListener(`blur`, checkIfEmpty)
+            last.addEventListener(`blur`, checkIfEmpty)
+            
+            function checkIfEmpty(event)
+            {
+                if(event.target.value === ``)
+                {
+                console.log(`Please Enter a ${event.target.name} name`)
+                }
+            }
+            */
+        </script>
+
+
         <script>
             /*
             document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
@@ -41,12 +64,22 @@
 
             //Speicial Topic: Making function definitions call themselves
 
+            /*
             (function doSomething()
             {
             console.log(`Okay!`)
             })()
+            */
         </script>
         
+        <input type="button" id="submit" value="Submit">
+        <script>
+            var button = document.querySelector(`#submit`)
+            submit.addEventListener(`click`, function(event)
+            {
+                console.log(event)
+            })
+        </script>
 
     </html>
 
